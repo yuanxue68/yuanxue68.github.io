@@ -305,5 +305,17 @@ a {
     width: 100%;
     padding:10%;
   }
+
+  .card {
+    width:80%;
+  }
+
+  .text-box {
+    text-align: center;
+  }
+
+  .lg-left-padding {
+    padding-left: 0;
+  }
 }
 
