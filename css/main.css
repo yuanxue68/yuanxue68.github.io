@@ -298,17 +298,17 @@ a {
 
 .drop-in-slow {
   animation-name: drop-in;
-  animation-duration: 3.5s;
+  animation-duration: 2.5s;
 }
 
 .drop-in-fast {
   animation-name: drop-in;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .drop-in {
   animation-name: drop-in;
-  animation-duration: 3.25s;
+  animation-duration: 2.25s;
 }
 
 @-webkit-keyframes drop-in {
@@ -354,7 +354,7 @@ a {
 }
 
 .delay {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 @-webkit-keyframes fade-in {
