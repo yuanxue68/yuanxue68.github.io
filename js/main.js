@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $(document.body).css({"background-image": "url('./img/landing-background.jpg')"});
+
   $("#arrow").click(function() {
     $('html, body').animate({
         scrollTop: $("#about-me").offset().top
