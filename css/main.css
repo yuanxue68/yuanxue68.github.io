@@ -296,145 +296,121 @@ a {
  60% {transform: translateY(-10px);}
 }
 
-.drop-in-slow {
-  animation-name: drop-in;
-  animation-duration: 2.5s;
+#loader-title {
+	padding-top: 80px;
+	padding-left: 30%;
 }
 
-.drop-in-fast {
-  animation-name: drop-in;
-  animation-duration: 2s;
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
-.drop-in {
-  animation-name: drop-in;
-  animation-duration: 2.25s;
-}
-
-@-webkit-keyframes drop-in {
-  from {
-    top: -300px;
-  }
-  to  {
-    top: 0px;
-  }
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+	z-index:1001;
 }
  
-@-moz-keyframes drop-in {
-  from {
-    top: -300px;
-  }
-  to  {
-    top: 0px;
-  }
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite; 
+   animation: spin 3s linear infinite; 
 }
  
-@-o-keyframes drop-in {
-  from {
-    top: -300px;
-  }
-  to  {
-    top: 0px;
-  }
-}
-
-@keyframes drop-in{
-  from {
-    top: -300px;
-  }
-  to  {
-    top: 0px;
-  }
-}
-
-.fade-in {
-  animation-name: fade-in;
-  animation-duration: 1.5s;
-  animation-fill-mode:forwards
-}
-
-.delay {
-  animation-delay: 1.5s;
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
 }
  
-@-moz-keyframes fade-in {
-  from {
-    opacity: 0;
+@-webkit-keyframes spin {
+  0% {
+  	-webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  to {
-    opacity: 1;
-  }
-}
- 
-@-o-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-@keyframes fade-in{
-  from {
-    opacity: 0;
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  to {
-    opacity: 1;
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-.fade-in-half {
-  animation-name: fade-in-half;
-  animation-duration: 2s;
-  animation-fill-mode:forwards
+#loader-wrapper .loader-section {
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	z-index: 1000;
 }
 
-@-webkit-keyframes fade-in-half {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
- 
-@-moz-keyframes fade-in-half {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
- 
-@-o-keyframes fade-in-half {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
+.loaded #loader-wrapper .loader-section {
+	-webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);	
+	-webkit-transition: all 0.7s 0.3s ease-out;
+	transition: all 0.7s 0.3s ease-out;
 }
 
-@keyframes fade-in-half {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
+.loaded #loader {
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+	tansition: all 0.3s ease-out;
 }
 
+.loaded #loader-wrapper{
+	visibility: hidden;
+	webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+
+	-webkit-transition: all 0.3s 1s ease-out; 
+	transition: all 0.3s 1s ease-out;
+}
 
 /* responsive */
 @media only screen and (max-width: 601px) {

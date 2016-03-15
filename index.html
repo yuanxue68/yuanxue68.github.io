@@ -16,6 +16,18 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
+    <!--loading page-->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section">
+				<div id="loader-title" class="lg-font light-font">
+					<span><i class="fa fa-beer"></i> Hi There! My Name Is </span> 
+					<span class="bright-font"> Yuan Xue</span>
+				</div>
+			</div>
+    </div>
+
 
     <!--floating nav bar-->
     <div id="floating-nav" class="fixed-action-btn click-to-toggle hide-this" style="top: 25px; right: 25px;">
@@ -31,14 +43,14 @@
     </div>
 
     <!-- Landing Section -->
-    <section class="flex flex-middle full-vertical dark-overlay fade-in-half">
+    <section class="flex flex-middle full-vertical dark-overlay">
       <div class="text-align-center">
-        <div class="md-font fade-in delay">Software Developer</div>
-        <div class="xlg-font fade-in delay">Yuan Xue</div>
+        <div class="md-font">Software Developer</div>
+        <div class="xlg-font">Yuan Xue</div>
         <div class="lg-font">
-          <a href="https://ca.linkedin.com/in/yuanxue" target="_blank"><i class="waves-effect waves-light btn-round fa fa-linkedin-square drop-in-fast"></i></a>
-          <a href="https://github.com/yuanxue68" target="_blank"><i class="waves-effect waves-light btn-round fa fa-github-alt drop-in"></i></a>
-          <a href="mailto:yuanxue68@gmail.com"><i class="waves-effect waves-light btn-round fa fa-envelope drop-in-slow"></i></a>
+          <a href="https://ca.linkedin.com/in/yuanxue" target="_blank"><i class="waves-effect waves-light btn-round fa fa-linkedin-square"></i></a>
+          <a href="https://github.com/yuanxue68" target="_blank"><i class="waves-effect waves-light btn-round fa fa-github-alt"></i></a>
+          <a href="mailto:yuanxue68@gmail.com"><i class="waves-effect waves-light btn-round fa fa-envelope"></i></a>
         </div>
         <div>
           <a id="arrow" class="md-font bottom bounce"><i class="fa fa-angle-double-down"></i></a>
@@ -47,10 +59,10 @@
     </section>
 
     <!-- About Me -->
-    <section id="about-me" class="text-align-center">
+    <section class="text-align-center">
       <div class="flex">
         <div class="col1 semi-light-backgtound bright-font">
-          <div>
+          <div id="about-me">
             <h3>About Me</h3>
             <div class="dark-font md-font text-box">
               Oh hello there, I'm Yuan Xue. I am a computer engineering new grad from the University of Toronto. 
@@ -64,7 +76,7 @@
           </div>
         </div>
         <div class="col2 dark-background bright-font">
-          <div>
+          <div id="education">
             <h3>Education</h3>
             <div class="light-font text-box">
               <div class="divide">
@@ -93,7 +105,7 @@
           <h3>Experience</h3>
         </div>
 
-        <div class="row">
+        <div class="row exp-section">
           <div class="col m4 s12 text-box">
             <div class="lg-left-padding">
               <div>Software Developer</div>
@@ -113,7 +125,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row exp-section">
           <div class="col m4 s12 text-box">
             <div class="lg-left-padding">
               <div>Research Assistant</div>
@@ -133,7 +145,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row exp-section">
           <div class="col m4 s12 text-box">
             <div class="lg-left-padding">
               <div>Android Development for Professor Dimitrios Hatzinakos</div>
@@ -153,7 +165,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row exp-section">
           <div class="col m4 s12 text-box">
             <div class="lg-left-padding">
               <div>Software Engineer Intern</div>
@@ -174,7 +186,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row exp-section">
           <div class="col m4 s12 text-box">
             <div class="lg-left-padding">
               <div>Web Developer</div>
@@ -351,6 +363,7 @@
 
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/materialize.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

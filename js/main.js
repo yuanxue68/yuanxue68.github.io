@@ -1,12 +1,16 @@
 $(document).ready(function(){
 
-  $(document.body).css({"background-image": "url('./img/landing-background.jpg')"});
+  setTimeout(function(){
+    $('body').addClass('loaded');
+  }, 3000);
+  
+  addScrollReveal();
 
   $("#arrow").click(function() {
     $('html, body').animate({
         scrollTop: $("#about-me").offset().top
     }, 700);
-  });
+  })
 
   var offset = 400;
 
@@ -22,3 +26,11 @@ $(document).ready(function(){
   });
 
 });
+
+function addScrollReveal (){
+  var sr = ScrollReveal();
+  sr.reveal('#about-me', {duration: 2000, scale:1, origin: 'left'});
+  sr.reveal('#education', {duration: 2000, scale:1, origin: 'right'});
+  sr.reveal('.exp-section', {duration: 2000});
+  sr.reveal('.card', {duration: 2000}, 100);
+}
